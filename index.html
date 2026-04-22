@@ -13,85 +13,146 @@
       --muted:#6b7280;
       --accent:#0f4c81;
       --line:#e5e7eb;
-      --max:980px;
+      --max:1080px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.65;
+      line-height:1.7;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
     header{
       background:#fff;
       border-bottom:1px solid var(--line);
       position:sticky;
       top:0;
-      z-index:10;
+      z-index:100;
     }
+
     nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      min-height:68px;
+      min-height:70px;
       gap:20px;
     }
+
     .brand{
       font-weight:700;
-      font-size:1.05rem;
+      font-size:1.1rem;
       color:var(--text);
     }
+
     .menu{
       display:flex;
       gap:18px;
       flex-wrap:wrap;
-      font-size:.96rem;
+      align-items:center;
     }
-    .hero{
-      padding:64px 0 28px;
+
+    .menu a{
+      color:var(--accent);
+      font-size:0.96rem;
+      font-weight:500;
+      cursor:pointer;
     }
+
+    .menu a.active{
+      font-weight:700;
+      text-decoration:underline;
+    }
+
+    main{
+      padding:38px 0 20px;
+    }
+
+    .view-section{
+      display:none;
+    }
+
+    .view-section.active{
+      display:block;
+    }
+
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.7fr 1fr;
+      grid-template-columns:1.7fr 1fr;
       gap:28px;
       align-items:start;
+      margin-bottom:22px;
     }
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
-      border-radius:18px;
-      padding:26px;
+      border-radius:20px;
+      padding:28px;
       box-shadow:0 8px 24px rgba(17,24,39,.04);
     }
+
     h1{
-      font-size:2.4rem;
+      font-size:2.6rem;
       line-height:1.15;
       margin:0 0 10px;
     }
+
     h2{
-      font-size:1.35rem;
+      font-size:1.5rem;
       margin:0 0 14px;
     }
+
     h3{
-      font-size:1.05rem;
+      font-size:1.08rem;
       margin:0 0 8px;
     }
+
+    p{
+      margin:0 0 14px;
+    }
+
     .lead{
       color:var(--muted);
-      font-size:1.05rem;
-      margin:0 0 18px;
+      font-size:1.08rem;
+      margin-bottom:18px;
     }
+
+    .profile-pic{
+      width:180px;
+      height:180px;
+      object-fit:cover;
+      border-radius:50%;
+      margin-bottom:18px;
+      border:1px solid var(--line);
+    }
+
     .buttons{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
       margin-top:18px;
     }
+
     .btn{
       display:inline-block;
       padding:10px 16px;
@@ -100,32 +161,25 @@
       border:1px solid var(--line);
       background:#fff;
       color:var(--text);
+      cursor:pointer;
     }
+
     .btn.primary{
       background:var(--accent);
       color:#fff;
       border-color:var(--accent);
     }
-    section{
-      padding:14px 0;
+
+    .section-card{
+      margin-bottom:20px;
     }
-    .section-card{margin-bottom:18px}
-    ul{padding-left:18px; margin:10px 0}
-    li{margin:7px 0}
-    .meta{
-      color:var(--muted);
-      font-size:.95rem;
-    }
+
     .two-col{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
     }
-    footer{
-      padding:28px 0 40px;
-      color:var(--muted);
-      font-size:.92rem;
-    }
+
     .tag{
       display:inline-block;
       padding:5px 10px;
@@ -136,10 +190,57 @@
       font-weight:600;
       margin:0 6px 8px 0;
     }
-    @media (max-width: 820px){
-      .hero-grid, .two-col{grid-template-columns:1fr}
-      h1{font-size:2rem}
-      nav{align-items:flex-start; padding:12px 0}
+
+    ul{
+      padding-left:20px;
+      margin:10px 0;
+    }
+
+    li{
+      margin:8px 0;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .edu-item{
+      margin-bottom:18px;
+      padding-bottom:12px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .edu-item:last-child{
+      border-bottom:none;
+      padding-bottom:0;
+      margin-bottom:0;
+    }
+
+    .quick p{
+      margin-bottom:12px;
+    }
+
+    footer{
+      padding:18px 0 36px;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media (max-width: 860px){
+      .hero-grid,
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:2rem;
+      }
+
+      nav{
+        align-items:flex-start;
+        padding:12px 0;
+      }
     }
   </style>
 </head>
@@ -147,103 +248,143 @@
   <header>
     <div class="wrap">
       <nav>
-        <a class="brand" href="#top">Sohail Raza</a>
+        <a class="brand" href="#" data-view="home">Sohail Raza</a>
         <div class="menu">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#cv">CV</a>
-          <a href="#contact">Contact</a>
+          <a href="#" data-view="home" class="active">About</a>
+          <a href="#" data-view="research">Research</a>
+          <a href="#" data-view="teaching">Teaching</a>
+          <a href="#" data-view="cv">CV</a>
+          <a href="#" data-view="contact">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="wrap">
-    <section class="hero">
+  <main class="wrap">
+
+    <!-- HOME / COVER PAGE -->
+    <section id="home" class="view-section active">
       <div class="hero-grid">
         <div class="card">
-          <img src="profile.jpeg" alt="Sohail Raza" style="width:180px; height:180px; object-fit:cover; border-radius:50%; margin-bottom:16px;">
+          <img src="profile.jpeg" alt="Sohail Raza" class="profile-pic">
+
           <h1>Sohail Raza</h1>
-          <p class="lead">PhD Candidate (Corporate Finance), Deakin University</p>
+          <p class="lead">Final-year PhD Candidate (Corporate Finance), Deakin University</p>
+
           <p>
-           My research is primarily focused on corporate finance, with particular interests in mergers and acquisitions, corporate innovation, ESG issues, responsible investing, and political influence. I am currently on the academic job market and am also open to teaching-focused and industry-relevant opportunities.
+            My research is primarily focused on corporate finance, with particular interests in climate risk, mergers and acquisitions, corporate innovation, responsible investing, and political influence.
           </p>
+
+          <p>
+            I am currently on the academic job market and am also open to teaching-focused and industry-relevant opportunities.
+          </p>
+
           <div class="buttons">
-            <a class="btn primary" href="#research">Research</a>
-            <a class="btn" href="#teaching">Teaching</a>
-            <a class="btn" href="#cv">CV</a>
-            <a class="btn" href="#contact">Contact</a>
+            <a class="btn primary" href="#" data-view="research">Research</a>
+            <a class="btn" href="#" data-view="teaching">Teaching</a>
+            <a class="btn" href="#" data-view="cv">CV</a>
+            <a class="btn" href="#" data-view="contact">Contact</a>
           </div>
         </div>
 
-        <div class="card">
-          <h2>Quick profile</h2>
+        <div class="card quick">
+          <h2>Quick Profile</h2>
           <p><strong>Institution:</strong> Deakin University</p>
           <p><strong>Job market status:</strong> Available for 2026–2027 opportunities</p>
-          <p><strong>Research areas:</strong> Merger and Acquisition, Corporate Innovation, Responsible Investing, Political Influence</p>
-          <p><strong>Teaching areas:</strong> undergraduate and postgraduate units in finance, economics, and business, with a particular interest in corporate finance, investments, derivatives, and applied data-driven learning</p>
-          <p><strong>Industry Experiance:</strong> Research and Data Training Associate, Research Associate</p>
-           <p><strong>Coding:</strong> R & Python</p>
-          <p><strong>Email(s):</strong> s.raza@deakin.edu.au, raza.sohailalig@gmail.com </p>
-          <p><strong>Personal Phone:</strong> +61-468994070</p>
+          <p><strong>Research areas:</strong> Corporate finance, climate risk, M&amp;A, corporate innovation, responsible investing, and political influence</p>
+          <p><strong>Teaching:</strong> Undergraduate and postgraduate units in finance, economics, and business</p>
+          <p><strong>Coding:</strong> R and Python</p>
+          <p><strong>Email:</strong> s.raza@deakin.edu.au</p>
+          <p><strong>Phone:</strong> +61 468 994 070</p>
         </div>
       </div>
-    </section>
 
-    <section id="about">
       <div class="card section-card">
         <h2>About</h2>
         <p>
-          I am a final-year PhD candidate in the Department of Finance at Deakin University, Australia. My research focuses on how U.S. corporations can respond and adapt to climate risk, responsible investment, and political influence. All of my projects are empirical in nature and rely on substantial data construction, coding, and analysis.
+          I am a final-year PhD candidate in the Department of Finance at Deakin University, Australia. My research focuses on how U.S. corporations respond and adapt to climate risk, responsible investment, and political influence.
         </p>
         <p>
-          This site shares my research, teaching experience, CV, and contact information.
+          All of my projects are empirical in nature and rely on substantial data construction, coding, and analysis.
         </p>
+      </div>
+
+      <div class="card section-card">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+          <h3>PhD in Finance</h3>
+          <p class="meta">Deakin University, Melbourne, Australia</p>
+        </div>
+
+        <div class="edu-item">
+          <h3>MS Economics &amp; Statistics, 2020</h3>
+          <p class="meta">Korea University, Seoul, Republic of Korea</p>
+        </div>
+
+        <div class="edu-item">
+          <h3>BS Economics, 2015</h3>
+          <p class="meta">Quaid-i-Azam University, Islamabad, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="card section-card">
+        <h2>Contact</h2>
+        <p>You can reach me directly by email.</p>
+        <div class="buttons">
+          <a class="btn primary" href="mailto:s.raza@deakin.edu.au?subject=Website%20Enquiry">Email Me</a>
+          <a class="btn" href="mailto:raza.sohailalig@gmail.com?subject=Website%20Enquiry">Gmail</a>
+        </div>
+        <p style="margin-top:16px;"><strong>Deakin email:</strong> <a href="mailto:s.raza@deakin.edu.au">s.raza@deakin.edu.au</a></p>
+        <p><strong>Personal email:</strong> <a href="mailto:raza.sohailalig@gmail.com">raza.sohailalig@gmail.com</a></p>
       </div>
     </section>
 
-    <section id="research">
-  <div class="card section-card">
-    <h2>Research</h2>
-    <span class="tag">Job Market Paper</span>
-    <span class="tag">Working Papers</span>
-    <span class="tag">Research in Progress</span>
-    <span class="tag">Previous Publications</span>
-    <span class="tag">Research Interests</span>
+    <!-- RESEARCH -->
+    <section id="research" class="view-section">
+      <div class="card section-card">
+        <h2>Research</h2>
+        <span class="tag">Job Market Paper</span>
+        <span class="tag">Working Papers</span>
+        <span class="tag">Research in Progress</span>
+        <span class="tag">Previous Publications</span>
+        <span class="tag">Research Interests</span>
 
-    <h3>Job Market Paper</h3>
-    <p><strong>Title:</strong> Climate Change Exposure and Acquisitions of Green Assets: Evidence from the Market for Corporate Control (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
-    <p><strong>SSRN:</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5566018" target="_blank">SSRN Link</a></p>
-    <p class="meta">Using a novel dataset constructed from USPTO patent data, target business descriptions, and EDGAR filings, we identify green acquisition targets and examine whether firms respond to climate transition risk by reallocating capital through such acquisitions in ways that are value-enhancing or indicative of managerial agency.</p>
+        <h3>Job Market Paper</h3>
+        <p><strong>Title:</strong> Climate Change Exposure and Acquisitions of Green Assets: Evidence from the Market for Corporate Control (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
+        <p><strong>SSRN:</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5566018" target="_blank">SSRN Link</a></p>
+        <p class="meta">
+          Using a novel dataset constructed from USPTO patent data, target business descriptions, and EDGAR filings, we identify green acquisition targets and examine whether firms respond to climate transition risk by reallocating capital through such acquisitions in ways that are value-enhancing or indicative of managerial agency.
+        </p>
 
-    <h3>Working Papers</h3>
-    <p><strong>Title:</strong> Socially Responsible Institutional Ownership and the Direction of Green Innovation (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
-    <p><strong>Title:</strong> Corporate Lobbying and Investment Efficiency (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
+        <h3>Working Papers</h3>
+        <p><strong>Title:</strong> Socially Responsible Institutional Ownership and the Direction of Green Innovation (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
+        <p><strong>Title:</strong> Corporate Lobbying and Investment Efficiency (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
 
-    <h3>Research in Progress</h3>
-    <p><strong>Title:</strong> Corporate Political Risk and Corporate Innovation: Evidence from Co-patenting (with Kambar Farooq)</p>
+        <h3>Research in Progress</h3>
+        <p><strong>Title:</strong> Corporate Political Risk and Corporate Innovation: Evidence from Co-patenting (with Kambar Farooq)</p>
 
-    <h3>Previous Publications</h3>
-    <p><strong>Title:</strong> Critical Value Functions for Likelihood-Ratio Tests under Normality (2023)</p>
-    <p class="meta">S. Munir, S. Raza, and K. A. Haq</p>
-    <p><strong>Journal:</strong> Chilean Journal of Statistics (ChJS), 14(1)</p>
-    <p><strong>Link:</strong> <a href="https://soche.cl/chjs/volumes/14/ChJS-14-01-04.pdf" target="_blank">View publication</a></p>
+        <h3>Previous Publications</h3>
+        <p><strong>Title:</strong> Critical Value Functions for Likelihood-Ratio Tests under Normality (2023)</p>
+        <p class="meta">S. Munir, S. Raza, and K. A. Haq</p>
+        <p><strong>Journal:</strong> Chilean Journal of Statistics, 14(1)</p>
+        <p><strong>Link:</strong> <a href="https://soche.cl/chjs/volumes/14/ChJS-14-01-04.pdf" target="_blank">View publication</a></p>
 
-    <p><strong>Title:</strong> The Impact of US Quantitative Easing (QE) Announcements on Indian Government Bond Yields (2022)</p>
-    <p class="meta">S. Raza and S. Munir</p>
-    <p><strong>Journal:</strong> Asian Journal of Economics, Business and Accounting, 23(19), 179–206</p>
-    <p><strong>Link:</strong> <a href="https://journalajeba.com/index.php/AJEBA/article/view/1083" target="_blank">View publication</a></p>
+        <p><strong>Title:</strong> The Impact of US Quantitative Easing (QE) Announcements on Indian Government Bond Yields (2022)</p>
+        <p class="meta">S. Raza and S. Munir</p>
+        <p><strong>Journal:</strong> Asian Journal of Economics, Business and Accounting, 23(19), 179–206</p>
+        <p><strong>Link:</strong> <a href="https://journalajeba.com/index.php/AJEBA/article/view/1083" target="_blank">View publication</a></p>
 
-    <h3>Research Interests</h3>
-    <p>Corporate finance, mergers and acquisitions, corporate innovation, ESG, responsible investing, and political influence.</p>
-  </div>
-
+        <h3>Research Interests</h3>
+        <p>Corporate finance, mergers and acquisitions, corporate innovation, ESG, responsible investing, and political influence.</p>
+      </div>
     </section>
 
-    <section id="teaching">
+    <!-- TEACHING -->
+    <section id="teaching" class="view-section">
       <div class="card section-card">
         <h2>Teaching</h2>
+
         <div class="two-col">
           <div>
             <h3>Teaching Experience</h3>
@@ -253,38 +394,42 @@
               <li>Add other units here</li>
             </ul>
           </div>
+
           <div>
             <h3>Teaching Interests</h3>
             <ul>
-              <li>Investments</li>
               <li>Corporate finance</li>
-              <li>Financial markets</li>
-              <li>Excel-based finance applications</li>
+              <li>Investments</li>
+              <li>Derivatives and risk management</li>
+              <li>Applied data-driven finance teaching</li>
             </ul>
           </div>
         </div>
-        <p class="meta">
-        </p>
       </div>
     </section>
 
-    <section id="cv">
+    <!-- CV -->
+    <section id="cv" class="view-section">
       <div class="card section-card">
         <h2>CV</h2>
-        <p>
-          Upload your CV PDF to the same GitHub repository and replace the link below.
-        </p>
+        <p>Upload your CV PDF to the same GitHub repository and keep the file name as <strong>cv.pdf</strong>.</p>
         <p><a href="cv.pdf" target="_blank">Download my CV (PDF)</a></p>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="view-section">
       <div class="card section-card">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@deakin.edu.au">your.email@deakin.edu.au</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-link" target="_blank">Add your LinkedIn URL</a></p>
-        <p>Google Scholar / SSRN / ORCID: add links once ready.</p>
+        <p><strong>Email:</strong> <a href="mailto:s.raza@deakin.edu.au">s.raza@deakin.edu.au</a></p>
+        <p><strong>Personal Email:</strong> <a href="mailto:raza.sohailalig@gmail.com">raza.sohailalig@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/sohailrazaa" target="_blank">github.com/sohailrazaa</a></p>
+        <p><strong>LinkedIn:</strong> Add your LinkedIn URL here</p>
+        <p><strong>Phone:</strong> +61 468 994 070</p>
+
+        <div class="buttons">
+          <a class="btn primary" href="mailto:s.raza@deakin.edu.au?subject=Website%20Enquiry">Send Email</a>
+        </div>
       </div>
     </section>
   </main>
@@ -292,5 +437,38 @@
   <footer class="wrap">
     <p>© 2026 Sohail Raza. Built with HTML/CSS and hosted on GitHub Pages.</p>
   </footer>
+
+  <script>
+    const links = document.querySelectorAll('[data-view]');
+    const sections = document.querySelectorAll('.view-section');
+
+    function showView(viewId) {
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      const activeSection = document.getElementById(viewId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+      }
+
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('data-view') === viewId && link.closest('.menu')) {
+          link.classList.add('active');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const viewId = this.getAttribute('data-view');
+        showView(viewId);
+      });
+    });
+  </script>
 </body>
 </html>
