@@ -1,574 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sohail Raza | PhD Candidate in Finance | Deakin University</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sohail Raza | PhD Candidate in Finance, Deakin University</title>
+  <meta name="description" content="Sohail Raza is a PhD candidate in Finance at Deakin University (thesis under examination). Research in empirical corporate finance: climate risk, M&amp;A, institutional ownership, innovation, and corporate political activity.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sohailrazaa.github.io/">
+  <meta property="og:title" content="Sohail Raza | PhD Candidate in Finance">
+  <meta property="og:description" content="Empirical corporate finance: climate risk, M&amp;A, institutional ownership, innovation, and corporate political activity.">
+  <meta property="og:url" content="https://sohailrazaa.github.io/">
+  <meta property="og:type" content="profile">
 
-<meta name="description" content="Sohail Raza is a final-year PhD Candidate (thesis under review) in Finance at Deakin University. .">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sohail Raza",
+    "jobTitle": "PhD Candidate in Finance",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "Deakin University"},
+    "email": "mailto:s.raza@deakin.edu.au",
+    "url": "https://sohailrazaa.github.io/",
+    "sameAs": [
+      "https://github.com/sohailrazaa",
+      "https://www.linkedin.com/in/sohail-raza-567279ba/"
+    ]
+  }
+  </script>
 
-<link rel="canonical" href="https://sohailrazaa.github.io/">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sohail Raza | PhD Candidate (Corporate Finance)</title>
-  <meta name="description" content="Personal academic website of Sohail Raza, PhD Candidate (Corporate Finance) at Deakin University." />
   <style>
     :root{
-      --bg:#f7f8fb;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --accent:#0f4c81;
-      --line:#e5e7eb;
-      --max:1080px;
+      --bg:#fbfbf9;
+      --surface:#ffffff;
+      --text:#1c2430;
+      --muted:#5b6573;
+      --accent:#17365d;
+      --accent-soft:#eaf0f7;
+      --line:#e3e6ea;
+      --max:960px;
+      --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#12161c;
+        --surface:#181d25;
+        --text:#e6e9ee;
+        --muted:#9aa4b2;
+        --accent:#8fb3df;
+        --accent-soft:#1f2a38;
+        --line:#2a313c;
+      }
     }
 
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-
+    html{scroll-behavior:smooth; scroll-padding-top:76px}
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      font-family:var(--sans);
+      font-size:16px;
+      line-height:1.65;
       background:var(--bg);
       color:var(--text);
-      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
     }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
 
-    a{
-      color:var(--accent);
-      text-decoration:none;
-    }
-
-    a:hover{
-      text-decoration:underline;
-    }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 20px;
-    }
-
+    /* ---------- Header ---------- */
     header{
-      background:#fff;
+      position:sticky; top:0; z-index:50;
+      background:color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter:blur(8px);
       border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      z-index:100;
     }
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:60px}
+    .brand{font-family:var(--serif); font-weight:700; font-size:1.15rem; color:var(--text)}
+    .brand:hover{text-decoration:none}
+    .menu{display:flex; gap:20px; overflow-x:auto; scrollbar-width:none}
+    .menu::-webkit-scrollbar{display:none}
+    .menu a{color:var(--muted); font-size:.92rem; font-weight:500; white-space:nowrap; padding:4px 0; border-bottom:2px solid transparent}
+    .menu a:hover{color:var(--text); text-decoration:none}
+    .menu a.active{color:var(--accent); border-bottom-color:var(--accent)}
 
-    nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      min-height:70px;
-      gap:20px;
-    }
-
-    .brand{
-      font-weight:700;
-      font-size:1.1rem;
-      color:var(--text);
-    }
-
-    .menu{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    .menu a{
-      color:var(--accent);
-      font-size:0.96rem;
-      font-weight:500;
-      cursor:pointer;
-    }
-
-    .menu a.active{
-      font-weight:700;
-      text-decoration:underline;
-    }
-
-    main{
-      padding:38px 0 20px;
-    }
-
-    .view-section{
-      display:none;
-    }
-
-    .view-section.active{
-      display:block;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.7fr 1fr;
-      gap:28px;
-      align-items:start;
-      margin-bottom:22px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:28px;
-      box-shadow:0 8px 24px rgba(17,24,39,.04);
-    }
-
-    h1{
-      font-size:2.6rem;
-      line-height:1.15;
-      margin:0 0 10px;
-    }
-
+    /* ---------- Sections ---------- */
+    section{padding:52px 0 8px}
+    h1,h2,h3{font-family:var(--serif); color:var(--text); line-height:1.25}
+    h1{font-size:2.5rem; font-weight:700; margin:0 0 6px}
     h2{
-      font-size:1.5rem;
-      margin:0 0 14px;
-    }
-
-    h3{
-      font-size:1.08rem;
-      margin:0 0 8px;
-    }
-
-    p{
-      margin:0 0 14px;
-    }
-
-    .lead{
-      color:var(--muted);
-      font-size:1.08rem;
-      margin-bottom:18px;
-    }
-
-    .profile-pic{
-      width:180px;
-      height:180px;
-      object-fit:cover;
-      border-radius:50%;
-      margin-bottom:18px;
-      border:1px solid var(--line);
-    }
-
-    .buttons{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:999px;
-      font-weight:600;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--text);
-      cursor:pointer;
-    }
-
-    .btn.primary{
-      background:var(--accent);
-      color:#fff;
-      border-color:var(--accent);
-    }
-
-    .section-card{
-      margin-bottom:20px;
-    }
-
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-    }
-
-    .tag{
-      display:inline-block;
-      padding:5px 10px;
-      border-radius:999px;
-      background:#eef4fb;
-      color:var(--accent);
-      font-size:.85rem;
-      font-weight:600;
-      margin:0 6px 8px 0;
-    }
-
-    ul{
-      padding-left:20px;
-      margin:10px 0;
-    }
-
-    li{
-      margin:8px 0;
-    }
-
-    .meta{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    .edu-item{
-      margin-bottom:18px;
-      padding-bottom:12px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .edu-item:last-child{
-      border-bottom:none;
-      padding-bottom:0;
-      margin-bottom:0;
-    }
-
-    .quick p{
-      margin-bottom:12px;
-    }
-
-    footer{
-      padding:18px 0 36px;
-      color:var(--muted);
-      font-size:.92rem;
-    }
-
-    @media (max-width: 860px){
-      .hero-grid,
-      .two-col{
-        grid-template-columns:1fr;
-      }
-
-      h1{
-        font-size:2rem;
-      }
-
-      nav{
-        align-items:flex-start;
-        padding:12px 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="wrap">
-      <nav>
-        <a class="brand" href="#" data-view="home">Sohail Raza</a>
-        <div class="menu">
-          <a href="#" data-view="home" class="active">About</a>
-          <a href="#" data-view="research">Research</a>
-          <a href="#" data-view="Experience">Experience</a>
-          <a href="#" data-view="cv">CV</a>
-          <a href="#" data-view="contact">Contact</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-
-    <!-- HOME / COVER PAGE -->
-    <section id="home" class="view-section active">
-      <div class="hero-grid">
-        <div class="card">
-          <img src="profile.jpeg" alt="Sohail Raza" class="profile-pic">
-
-          <h1>Sohail Raza</h1>
-          <p class="lead">Final-year PhD Candidate (Corporate Finance), Deakin University</p>
-
-          <p>
-            My research is primarily focused on corporate finance, with particular interests in climate risk, mergers and acquisitions, corporate innovation, responsible investing, and political influence.
-          </p>
-
-          <p>
-            I am currently on the academic job market and am also open to teaching-focused and industry-relevant opportunities.
-          </p>
-
-        </div>
-
-      <div class="card quick">
-  <h2>Quick Profile</h2>
-  <p><strong>Institution:</strong> Deakin University</p>
-  <p><strong>Job market status:</strong> Available for 2026–2027 opportunities</p>
-  <p><strong>Research areas:</strong> Corporate finance, climate risk, M&amp;A, corporate innovation, responsible investing, and political influence</p>
-  <p><strong>Teaching:</strong> Undergraduate and postgraduate units in finance, economics, and business</p>
-  <p><strong>Skills:</strong> Designing innovative teaching examples and activities, data-centric learning, web scraping financial data, textual analysis, LSEG Refinitiv Workspace, R, and Python</p>
-  <p><strong>Email:</strong> s.raza@deakin.edu.au</p>
-  <p><strong>Phone:</strong> +61 468 994 070</p>
-</div>
-
-      <div class="card section-card">
-  <h2>About</h2>
-  <p>
-    I am a final-year PhD candidate in the Department of Finance at Deakin University, Australia. My research focuses on how firms respond to climate risk, responsible investment, and political influence, with a broader interest in corporate finance, innovation, and sustainability.
-  </p>
-  <p>
-    My doctoral research currently centres on three main projects:
-  </p>
-
-  <p>
-    <p><strong>🌍 Climate Change Exposure and Acquisitions of Green Assets: Evidence from the Market for Corporate Control</strong>: Analyzing whether firms respond to climate transition risk by reallocating capital through green acquisitions in ways that are value-enhancing rather than driven by managerial agency.</p>
-
-<p><strong>🌱 Socially Responsible Institutional Ownership and the Direction of Green Innovation</strong>: Assessing how socially responsible institutional ownership shapes not only the level of green innovation, but also its direction and type.</p>
-
-<p><strong>🏛️ Corporate Lobbying and Investment Efficiency</strong>: Examining whether political lobbying helps firms reduce political frictions and improve capital allocation efficiency.</p>
-  
-  </p>
-</div>
-
-      <div class="card section-card">
-        <h2>Education</h2>
-
-        <div class="edu-item">
-          <h3>PhD Candidate (Corporate Finance), 2023-Present</h3>
-          <p class="meta">Deakin University, Melbourne, Australia</p>
-        </div>
-
-        <div class="edu-item">
-          <h3>Master of Economics in Finance (MAF), 2017-2019</h3>
-          <p class="meta">Wang Yanan Institute for Studies in Economics (WISE), Xiamen University, China</p>
-        </div>
-
-        <div class="edu-item">
-          <h3>MA in Economics, 2014-2016</h3>
-          <p class="meta">Aligarh Muslim University, India</p>
-        </div>
-
-        <div class="edu-item">
-          <h3>BA (Honours) in Economics, 2011-2014</h3>
-          <p class="meta">Aligarh Muslim University, India </p>
-        </div>
-      </div>
-
-      <div class="card section-card">
-        <h2>Contact</h2>
-        <p>You can reach me directly by email.</p>
-        <div class="buttons">
-          <a class="btn primary" href="mailto:s.raza@deakin.edu.au?subject=Website%20Enquiry">Email Me</a>
-          <a class="btn" href="mailto:raza.sohailalig@gmail.com?subject=Website%20Enquiry">Gmail</a>
-        </div>
-        <p style="margin-top:16px;"><strong>Deakin email:</strong> <a href="mailto:s.raza@deakin.edu.au">s.raza@deakin.edu.au</a></p>
-        <p><strong>Personal email:</strong> <a href="mailto:raza.sohailalig@gmail.com">raza.sohailalig@gmail.com</a></p>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="view-section">
-      <div class="card section-card">
-        <h2>Research</h2>
-        <span class="tag">Job Market Paper</span>
-        <span class="tag">Working Papers</span>
-        <span class="tag">Research in Progress</span>
-        <span class="tag">Previous Publications</span>
-        <span class="tag">Research Interests</span>
-
-        <h3>Job Market Paper</h3>
-        <p><strong>Title:</strong> Climate Change Exposure and Acquisitions of Green Assets: Evidence from the Market for Corporate Control (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
-        <p><strong>SSRN:</strong> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5566018" target="_blank">SSRN Link</a></p>
-        <p class="meta">
-          Using a novel dataset constructed from USPTO patent data, target business descriptions, and EDGAR filings, we identify green acquisition targets and examine whether firms respond to climate transition risk by reallocating capital through such acquisitions in ways that are value-enhancing or indicative of managerial agency.
-        </p>
-
-        <h3>Working Papers</h3>
-        <p><strong>Title:</strong> Socially Responsible Institutional Ownership and the Direction of Green Innovation (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
-        <p><strong>Title:</strong> Corporate Lobbying and Investment Efficiency (with Saikat Sovan Deb, Edward J. Podolski, and Wei Shi)</p>
-
-        <h3>Research in Progress</h3>
-        <p><strong>Title:</strong> Corporate Political Risk and Corporate Innovation: Evidence from Co-patenting (with Kambar Farooq)</p>
-
-        <h3>Previous Publications</h3>
-        <p><strong>Title:</strong> Critical Value Functions for Likelihood-Ratio Tests under Normality (2023)</p>
-        <p class="meta">S. Munir, S. Raza, and K. A. Haq</p>
-        <p><strong>Journal:</strong> Chilean Journal of Statistics, 14(1)</p>
-        <p><strong>Link:</strong> <a href="https://soche.cl/chjs/volumes/14/ChJS-14-01-04.pdf" target="_blank">View publication</a></p>
-
-        <p><strong>Title:</strong> The Impact of US Quantitative Easing (QE) Announcements on Indian Government Bond Yields (2022)</p>
-        <p class="meta">S. Raza and S. Munir</p>
-        <p><strong>Journal:</strong> Asian Journal of Economics, Business and Accounting, 23(19), 179–206</p>
-        <p><strong>Link:</strong> <a href="https://journalajeba.com/index.php/AJEBA/article/view/1083" target="_blank">View publication</a></p>
-
-<h3>Research Activities</h3>
-<ul>
-  <li><strong>Deakin Brown Bag Seminar</strong>, (2025) — Presented paper: <em>Climate Risk and Strategic M&amp;A</em>.</li>
-  <li><strong>I.S.E.O. Summer School</strong>, Iseo, Italy (2025) — Participated in the PhD Summer School and presented a research poster. Keynote guest: Robert C. Merton, Professor of Finance, MIT Sloan School of Management.</li>
-  <li><strong>FMA Asia-Pacific Conference</strong>, National Taiwan University, Taipei, Taiwan (15–17 December 2025) — Presented paper: <em>Climate Risk and Strategic M&amp;A</em> (Main Session).</li>
-  <li><strong>Discussant</strong>, FMA Asia-Pacific Conference, National Taiwan University, Taipei, Taiwan (15–17 December 2025) — Session: <em>Corporate ESG</em>; paper discussed: <em>Why do productive firms pollute less?</em></li>
-  <li><strong>4<sup>th</sup> PhD Summer Institute in International Trade & Industrial Organisation</strong>, Deakin University, Melbourne, Australia (March 2026) — Presented paper: <em>Climate Risk and Strategic M&amp;A.</em></li>
-  <li><strong>Ad hoc Reviewer</strong>, Australian Journal of Management (2025).</li>
-</ul>
-        
-
-        <h3>Research Interests</h3>
-        <p>Corporate finance, mergers and acquisitions, corporate innovation, ESG, responsible investing, and political influence.</p>
-      </div>
-    </section>
-
-    <!-- TEACHING -->
-    <section id="Experience" class="view-section">
-  <div class="card section-card">
-    <h2>Experience</h2>
-
-   <h3>Teaching Philosophy</h3>
-
-<p>
-  My teaching philosophy is centred on making finance accessible, practical, and intellectually engaging for students from diverse academic and professional backgrounds. I believe that finance education should go beyond formulas, models, and technical tools. Students need to understand the intuition behind financial concepts, learn how to apply them to real-world problems, and develop the confidence to make informed decisions under uncertainty. I also aim to help students learn how to learn, so they can adapt to new financial problems, markets, technologies, and data sources throughout their careers. For example, when teaching equity investment and portfolio theory, I first motivate the practical problem faced by investors: how to compare stocks, evaluate risk and return, and understand the benefits of diversification. This helps students see finance theory not as abstract mathematics, but as a structured way of analysing real financial decisions.
-</p>
-
-<p>
-  A key part of my teaching approach is connecting theory with professional financial data and market practice. I actively introduce students to LSEG Refinitiv Workspace and use it to demonstrate price history, company financials, peer comparison, multiples valuation, IPO data, and M&amp;A datasets. In corporate finance and financial management teaching, I use these tools to help students understand how concepts such as valuation, cost of capital, market performance, and corporate transactions are applied in practice. By working with real market data, students learn not only how to complete calculations, but also how to interpret financial information, compare firms, justify assumptions, and communicate their analysis clearly.
-</p>
-
-<p>
-  I also aim to create an interactive and application-oriented classroom environment. I use Excel-based exercises, real market examples, and problem-solving activities to support students, especially those who may initially feel less confident with quantitative finance. As part of the teaching team, I have implemented a trading game activity where students use market data and Excel to make investment decisions, track portfolio performance, and reflect on trading strategies. Building on this experience, I have also developed my own modified demo version of an Excel-based ASX trading simulation to further support applied and data-informed learning. The activity helps make finance more engaging while supporting students to develop practical skills in portfolio tracking, market interpretation, and investment decision-making. A demo version can be viewed here:
-  <a href="ASX_Trading_Simulation_Material.xlsx" target="_blank">Trading Game Excel File</a>.
-</p>
-    
-    <h3>Teaching Experience</h3>
-
-    <div class="edu-item">
-      <h3>Deakin University (2023–Present)</h3>
-      <p class="meta">Graduate Researcher, Teaching Fellow / Casual Academic</p>
-      <p><em> Department of Finance, Department of Information Systems, Deakin University, Australia</em></p>
-
-      <p><strong>Undergraduate:</strong></p>
-      <ul>
-        <li>MAF308 – Financial Derivatives and Risk Management (Marking Tutor)</li>
-        <li>MAF302 – Corporate Finance (Marking Tutor)</li>
-        <li>MAF-202 – Money and Capital Markets (Marking Tutor)</li>
-        <li>MAF-307 – Equities and Investment Analysis (Marking Tutor)</li>
-        <li>MIS770 – Foundation Skills in Data Analysis</li>
-      </ul>
-    </div>
-
-    <div class="edu-item">
-      <h3>RMIT University (2025–Present)</h3>
-      <p class="meta">Casual Academic / Research Fellow</p>
-      <p><em>RMIT University, Melbourne, Australia</em></p>
-
-      <p><strong>Undergraduate:</strong></p>
-      <ul>
-        <li>BAFI1042 – Equity Investment and Portfolio Management</li>
-        <li>BAFI1005 – Financial Markets and Institutions (Marking Tutor)</li>
-        <li>BAFI3276 – Applied Finance: A Case Study Approach (Marking Tutor)</li>
-      </ul>
-
-      <p><strong>Postgraduate:</strong></p>
-      <ul>
-        <li>BAFI3257 – Corporate Financial Management</li>
-      </ul>
-    </div>
-
-    <div class="edu-item">
-      <h3>Deakin College (2024–Present)</h3>
-      <p class="meta">Academic Teacher, Diploma of Commerce</p>
-      <p><em>Deakin College, Burwood / Waterfront, Australia</em></p>
-
-      <ul>
-        <li>MAE120 – Money, Growth and the Economy</li>
-        <li>MAE101 – Economic Principles</li>
-        <li>MAF101 – Fundamentals of Finance</li>
-        <li>MAA104 – Financial Literacy</li>
-      </ul>
-    </div>
-
-     <div class="edu-item">
-      <h3>Xiamen University (2019–2020)</h3>
-      <p class="meta">Teaching Assistant </p>
-      <p><em>Xiamen University, Xiamen, China</em></p>
-       
-<p><strong>Post Graduate:</strong></p>
-      <ul>
-        <li> Unit: Literature Review and Thesis Writing</li>
-      </ul>
-
-
-       
-    </div>
-
-    <h3>Professional</h3>
-
-    <div class="edu-item">
-      <h3>Research and Data Training Associate (10/2022–01/2023)</h3>
-      <p><em>OW DataLeads, India</em></p>
-      <p class="meta">
-        Contributed to the Kruxd global database on health and finance and delivered data training sessions as part of the Google News Initiative.
-      </p>
-    </div>
-
-    <div class="edu-item">
-      <h3>Academic Research Writer (06/2021–04/2022)</h3>
-      <p><em>Paperpedia Pvt. Ltd., India</em></p>
-      <p class="meta">
-        Conducted applied data analysis in STATA, R, and Excel for projects in economics, finance, and statistics.
-      </p>
-    </div>
-
-   
-  </div>
-</section>
-
-    <!-- CV -->
-    <section id="cv" class="view-section">
-      <div class="card section-card">
-        <h2>CV</h2>
-        <p><a href="Sohail_CV.pdf" target="_blank">Download my CV (PDF)</a></p>
-      </div>
-    </section>
-
-    <!-- CONTACT PAGE -->
-    <section id="contact" class="view-section">
-      <div class="card section-card">
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:s.raza@deakin.edu.au">s.raza@deakin.edu.au</a></p>
-        <p><strong>Personal Email:</strong> <a href="mailto:raza.sohailalig@gmail.com">raza.sohailalig@gmail.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/sohailrazaa" target="_blank">github.com/sohailrazaa</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sohail-raza-567279ba/" target="_blank">View my LinkedIn</a></p>
-        <p><strong>Phone:</strong> +61 468 994 070</p>
-
-        <div class="buttons">
-          <a class="btn primary" href="mailto:s.raza@deakin.edu.au?subject=Website%20Enquiry">Send Email</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <p>© 2026 Sohail Raza. Built with HTML/CSS and hosted on GitHub Pages.</p>
-  </footer>
-
-  <script>
-    const links = document.querySelectorAll('[data-view]');
-    const sections = document.querySelectorAll('.view-section');
-
-    function showView(viewId) {
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-
-      const activeSection = document.getElementById(viewId);
-      if (activeSection) {
-        activeSection.classList.add('active');
-      }
-
-      links.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('data-view') === viewId && link.closest('.menu')) {
-          link.classList.add('active');
-        }
-      });
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const viewId = this.getAttribute('data-view');
-        showView(viewId);
-      });
-    });
-  </script>
-</body>
-</html>
+      font-size:1.55rem; font-weight:600; margin:0 0 22px;
+      padding-bottom:8px; border-bottom:1px
